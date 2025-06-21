@@ -16,7 +16,7 @@ def mh_optimize(df_pred, alpha=1., debug=False):
     manual_effort = lpSum(1 - x_list[i]*z_list[i] for i in range(m))
     prob += manual_effort
     ##  Constraints...
-    M = 1e6
+    M = 20
     eps = 1e-6
     for i in range(m):
         prob += (lpSum(w_list[j] * df_pred.iloc[i][f'p_theta_{j}'] for j in range(n)) - 1 - M * x_list[i] <= 0, f'x_{i}_constraint_1')

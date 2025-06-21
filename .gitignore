@@ -3,3 +3,4 @@ outputs/
 __pycache__/
 Hu_Cifar10/
 Hu_Imagenet/
+Pair*/

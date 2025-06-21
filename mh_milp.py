@@ -144,7 +144,7 @@ def predict(models, ds, batch_size=512, device='cuda'):
 
 
 if __name__ == '__main__':
-    # datasets = ['svhn', 'mnist', 'fashionmnist', 'cifar10'][::-1]
+    datasets = ['svhn', 'mnist', 'fashionmnist', 'cifar10'][::-1]
     # datasets = ['svhn', 'mnist', 'fashionmnist', 'cifar10']
     # datasets = ['mnist', 'fashionmnist']
     # datasets = ['cifar10', 'svhn']
@@ -152,16 +152,16 @@ if __name__ == '__main__':
     # datasets = ['svhn', 'mnist'][::-1]
     # datasets = ['svhn']
     # datasets = ['cifar10', 'fashionmnist']
-    datasets = ['hu_cifar10', 'hu_imagenet']
-    n_classes = 2
-    # h_values = [0.01, 0.05, 0.15, 0.25, 0.35, 0.45]
-    h_values = [0.15, 0.25, 0.35]
-    alpha = 1.
-    repeats = 2
-    epochs = 25
+    # datasets = ['hu_cifar10', 'hu_imagenet']
+    n_classes = 10
+    h_values = [0.01, 0.05, 0.15, 0.25, 0.35, 0.45]
+    # h_values = [0.15, 0.25, 0.35]
+    alpha = 0.9
+    repeats = 5
+    epochs = 50
     batch_size = 256
     n_tries = 3  ##  Number of tries for fine-tuning
-    model_names = ['resnet', 'resnet', 'vgg']
+    model_names = ['resnet', 'vgg', 'vit']
     lrs = [3e-3, 1e-3, 3e-4]
     # model_names = ['resnet', 'vgg']
     # lrs = [3e-3, 1e-3]
